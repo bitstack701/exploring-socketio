@@ -1,0 +1,27 @@
+{
+  "name": "socket-io-with-redis",
+  "version": "1.0.0",
+  "description": "A playground app to learn how to share socket.io messages between servers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node start-client.js",
+    "server1": "DEBUG=bitstack:* port=3005 node server.js ",
+    "server2": "DEBUG=bitstack:* port=3006 node server.js ",
+    "deploy": "node build-client.js && now -e NODE_ENV=production"
+  },
+  "keywords": [
+    "websockets",
+    "socket.io"
+  ],
+  "author": "bitstack",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.6.1",
+    "express": "^4.14.1",
+    "jsonwebtoken": "^7.3.0",
+    "rxjs": "^5.2.0",
+    "socket.io": "^1.7.3",
+    "socket.io-redis": "^4.0.0"
+  }
+}
