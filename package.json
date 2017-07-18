@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "node start-client.js",
-    "server1": "DEBUG=bitstack:* port=3005 node server.js ",
-    "server2": "DEBUG=bitstack:* port=3006 node server.js ",
+    "server": "DEBUG=bitstack:* port=3005 node server.js ",
+    "server1": "DEBUG=bitstack:* port=3006 node server.js ",
     "deploy": "node build-client.js && now -e NODE_ENV=production"
   },
   "keywords": [

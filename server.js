@@ -35,6 +35,7 @@ app.get('/sockets', function (req, res) {
 
 process.on('SIGINT', function () {
   console.log('Server going down SIGINT');
+  process.exit(0)
 })
 
 process.on('SIGTERM', function () {
@@ -48,6 +49,7 @@ process.on('exit', function () {
 
 process.on('uncaughtException', function (err) {
   console.log('Server going down uncaughtException');
+  console.log(err)
 });
 
 
