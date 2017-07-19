@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "node start-client.js",
-    "server": "DEBUG=bitstack:* port=3005 node server.js ",
-    "server1": "DEBUG=bitstack:* port=3006 node server.js ",
+    "server": "DEBUG=bitstack:* port=3005 node server/server.js ",
+    "server1": "DEBUG=bitstack:* port=3006 node server/server.js ",
     "deploy": "node build-client.js && now -e NODE_ENV=production"
   },
   "keywords": [
@@ -18,6 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^2.6.1",
+    "dotenv": "^4.0.0",
     "express": "^4.14.1",
     "jsonwebtoken": "^7.3.0",
     "rxjs": "^5.2.0",

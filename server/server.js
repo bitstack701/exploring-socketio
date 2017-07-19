@@ -1,3 +1,6 @@
+// configure the .env config file
+require('dotenv').config()
+
 const Rx = require('rxjs/Rx')
 const express = require('express');
 const app = express();
@@ -49,7 +52,7 @@ process.on('exit', function () {
 
 process.on('uncaughtException', function (err) {
   console.log('Server going down uncaughtException');
-  console.log(err)
+  console.log(err)     
 });
 
 
@@ -88,10 +91,10 @@ app.get('/rooms', function (req, res) {
   })
 })
 
-require('./server/Sockets')({io, socketMap, userMap})
-require('./server/Users')({io, socketMap, userMap})
-require('./server/Messages')({io, socketMap, userMap})
-require('./server/Rooms')({io, socketMap, userMap})
+require('./Sockets')({io, socketMap, userMap})
+require('./Users')({io, socketMap, userMap})
+require('./Messages')({io, socketMap, userMap})
+require('./Rooms')({io, socketMap, userMap})
 
 let port = process.env.port || 3005
 http.listen(port, function () {
